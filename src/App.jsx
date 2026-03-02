@@ -8,7 +8,6 @@ import Movie from './pages/Movie'
 
 function App() {
   
-
   return (
     <Routes>
     <Route index element={<Home />} />
