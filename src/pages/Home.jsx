@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import History from "../components/History"
+import { Link } from "react-router-dom"
+import MovieCard from "../components/MovieCard"
 
 export default function Home(){
     const [search, setSearch] = useState()
@@ -57,6 +59,14 @@ export default function Home(){
                 { focused ? <History history={history} setSearch={setSearch} /> : null }
                 <button onClick={getMovies}>Søk</button>
             </form>
+            {movies.map((movie) => (
+                <MovieCard
+                    key={movie.imdbID}
+                    title={movie.Title}
+                    year={movie.Year}
+                    poster={movie.Poster}
+                />
+            ))}
         </main>
     )
 

@@ -10,8 +10,8 @@ function App() {
   
   return (
     <Routes>
-    <Route index element={<Home />} />
-    <Route path=':movie' element={<Movie />} />
+      <Route index element={<Home />} />
+      <Route path=':movie' element={<Movie />} />
     </Routes>
   )
 }
