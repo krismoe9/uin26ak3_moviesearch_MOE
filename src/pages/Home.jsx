@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import History from "../components/History"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import MovieCard from "../components/MovieCard"
 import Movie from "./Movie"
 
@@ -13,6 +13,8 @@ export default function Home(){
     const [search, setSearch] = useState("james+bond")
     const [data, setData] = useState()
     const [error, setError] = useState()
+
+
 
     //console.log("Denne kommer fra storage", storedHistory)  //kommentert ut av studentassisten
 
@@ -81,17 +83,13 @@ export default function Home(){
             </article>
 
             <section className="PosterSection">
-            {data?.map((film) => (
-                const 
-
-                <Link to={<Movie/>}>
+            {data?.map((film) => ( 
                 <MovieCard
                     key={film.imdbID /* key for å identifisere de forskjellige filmene */}
                     title={film.Title}
                     year={film.Year}
                     poster={film.Poster}
                 />
-                </Link>
             ))}
             </section>
         </main>

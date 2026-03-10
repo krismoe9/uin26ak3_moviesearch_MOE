@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' index element={<Home />} />
-      <Route path=':movie' element={<Movie />} />
+      <Route path='/movie/:imdbID' element={<Movie />} />
     </Routes>
   )
 }
