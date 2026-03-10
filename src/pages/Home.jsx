@@ -5,21 +5,21 @@ import MovieCard from "../components/MovieCard"
 
 export default function Home(){
     
-    /* const storedHistory = localStorage.getItem("search") */
+    /* const storedHistory = localStorage.getItem("search") */ //kommentert ut av studentassisten
     const [focused, setFocused] = useState(false)
     
-    /* const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : []) */
+    /* const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : []) */ //kommentert ut av studentassisten
     const [search, setSearch] = useState("james+bond")
     const [data, setData] = useState()
     const [error, setError] = useState()
 
-    /* console.log("Denne kommer fra storage", storedHistory) */
+    /* console.log("Denne kommer fra storage", storedHistory) */ //kommentert ut av studentassisten
 
     //Kode fra undervisning
     const apiKey = import.meta.env.VITE_APP_API_KEY
     const baseUrl = `http://www.omdbapi.com/?s=${search}&apikey=${apiKey}`
 
-    /* console.log(baseUrl) */
+    /* console.log(baseUrl) */ //kommentert ut av studentassisten
     
 
     useEffect(()=>{ // Flyttet getMovies inn i useEffect, useEffect refresher siden (refresher ved hvert søk pga [search]) (Fikk hjelp av studentassistentene med dette)
@@ -44,8 +44,9 @@ export default function Home(){
     const handleChange = (e)=>{
         setSearch(e.target.value)
         
+        //varsel når man skriver under 3 bokstaver i søkefeltet
         if (e.target.value.length < 3) { 
-            setError("Du må skrive mer") //alert når man skriver under 3 bokstaver i søkefeltet
+            setError("Du må skrive minst 3 bokstaver") //varsel-tekst
         } else {
             setError("")
         }
@@ -70,28 +71,21 @@ export default function Home(){
                             <span>{error}</span>
                     )}
                 </label>
-                {/* { focused ? <History history={history} setSearch={setSearch} /> : null } */}
+                {/* { focused ? <History history={history} setSearch={setSearch} /> : null } */ /* kommentert ut av studentassisten */ } 
                 <button>Søk</button>
             </form>
             </article>
-            <section className="PosterSection">
-                {data?.map((film) => (
-                <article key={film.imdbID} className="PosterCard">  {/* key for å identifisere de forskjellige filmene */}
-                    <img src={film.Poster} alt={film.Title} />
-                    <p>{film.Title}</p>
-                    <p>{film.Year}</p> 
-                </article>
-                ))}
-            </section>
 
-           {/*  {movies.map((movie) => (
+            <section className="PosterSection">
+            {data?.map((film) => (
                 <MovieCard
-                    key={movie.imdbID}
-                    title={movie.Title}
-                    year={movie.Year}
-                    poster={movie.Poster}
+                    key={film.imdbID /* key for å identifisere de forskjellige filmene */}
+                    title={film.Title}
+                    year={film.Year}
+                    poster={film.Poster}
                 />
-            ))} */}
+            ))}
+            </section>
         </main>
     )
 
