@@ -6,7 +6,7 @@ export default function MovieCard({title, year, poster}){
     //kilde slug https://rohitmondallblog.hashnode.dev/usingslug-to-make-dynamic-and-user-friendly-urls-for-our-website
     //kiilde slug https://www.youtube.com/shorts/xkWvkjaW4k8
     //ChatGPT-samtale https://chatgpt.com/share/69affb83-440c-8011-9771-10c751302e5e
-    
+
     
     const slug = title
         ?.toLowerCase() //gjør om til små bokstaver i hele teksen
@@ -16,7 +16,7 @@ export default function MovieCard({title, year, poster}){
         console.log(title)
 
     return( 
-        <Link to={`/movie/${slug}`} className="MovieCardLink">
+        <Link to={`/${slug}`} className="MovieCardLink"> 
             <article className="MovieCard">  
                 <h3>{title}</h3>
                 <p>{year}</p> 
