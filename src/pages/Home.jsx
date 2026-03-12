@@ -8,7 +8,6 @@ import Movie from "./Movie"
 export default function Home(){
     
     const storedHistory = localStorage.getItem("search") //kommentert ut av studentassisten
-    //const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : [])  //gammel kode
     
     let parsedHistory = [] //ChatGPT
     try {
@@ -21,38 +20,39 @@ export default function Home(){
     const [history, setHistory] = useState(parsedHistory)
     const [focused, setFocused] = useState(false)
     
-    const [search, setSearch] = useState("james+bond")
+    const [search, setSearch] = useState("james+bond") //fikk hjelp av studentassistenene med denne koden
     const [data, setData] = useState()
     const [error, setError] = useState()
 
 
 
 
-    console.log("Denne kommer fra storage", storedHistory)  //kommentert ut av studentassisten
+    console.log("Denne kommer fra storage", storedHistory)  
 
     //Kode fra undervisning
     const apiKey = import.meta.env.VITE_APP_API_KEY
     const baseUrl = `http://www.omdbapi.com/?s=${search}&apikey=${apiKey}`
 
-    console.log(baseUrl)  //kommentert ut av studentassisten
+    console.log(baseUrl)  
     
 
     useEffect(()=>{ // Flyttet getMovies inn i useEffect, useEffect refresher siden (refresher ved hvert søk pga [search]) (Fikk hjelp av studentassistentene med dette)
-        //varsel når man skriver under 3 bokstaver i søkefeltet
+        //varsel når man skriver under 3 bokstaver i søkefeltet kilde: https://www.geeksforgeeks.org/reactjs/how-to-restrict-user-character-input-limit-in-reactjs/
+        //ChatGPT-samtale https://chatgpt.com/share/69b286a8-b940-8011-b2c5-ea5249fd7a86
+    
         if (search.length < 3) {
             setError("Du må skrive minst 3 bokstaver")
-            
             return
         } else {
             setError("")
         }
 
         if(Array.isArray(history)) {
-            localStorage.setItem("search", JSON.stringify(history)) //kommentert ut av studentassistent
+            localStorage.setItem("search", JSON.stringify(history))
         }
 
 
-
+        //ChatGPT-samtale https://chatgpt.com/share/69b286d3-e944-8011-b517-dae01e0c4a60
         const getMovies = async()=>{
             try
             {
@@ -66,7 +66,7 @@ export default function Home(){
         }
         getMovies()
 
-     }, [search,history]) //ChatGPT
+     }, [search,history]) //ChatGPT-samtale https://chatgpt.com/share/69b286fb-ee90-8011-a944-5d545ea6d50d
 
         
 
@@ -76,9 +76,7 @@ export default function Home(){
     }
 
     const handleSubmit = (e)=>{
-        e.preventDefault()
-        //setSearch(e)
-        //e.target.reset() 
+        e.preventDefault() 
         
         setHistory(prev => Array.isArray(prev) ? [...prev, search] : [search]) //ChatGPT 
     }
@@ -104,7 +102,7 @@ export default function Home(){
             <section className="PosterSection">
             {data?.map((film) => ( 
                 <MovieCard
-                    key={film.imdbID /* key for å identifisere de forskjellige filmene */}
+                    key={film.imdbID /* key for å identifisere de forskjellige filmene  ChatGPT-samtale https://chatgpt.com/c/69afd1d7-f6cc-8325-b58b-7951de55c6cc */}
                     title={film.Title}
                     year={film.Year}
                     poster={film.Poster}

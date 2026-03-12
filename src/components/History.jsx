@@ -1,3 +1,4 @@
+//kode fra undervisning
 export default function History({history, setSearch}){
 
     const handleChange = (e)=> {

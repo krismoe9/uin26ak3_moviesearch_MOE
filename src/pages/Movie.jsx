@@ -11,20 +11,20 @@ export default function Movie(){
 
     const apiKey = import.meta.env.VITE_APP_API_KEY
 
-     const slugTitle = ( slug ) => { //ChatGPT
-         return slug
-          .split("-")
-          .map(word => word[0].toUpperCase() + word.slice(1))
-          .join(" ")
+     const slugTitle = ( slug ) => { //ChatGPT-samtale https://chatgpt.com/share/69b286e7-8424-8011-ab42-295a1bca7eff
+         return slug //retunerer slug som en lesbar tittel
+          .split("-") //deler teksten ved hver "-" og deler de opp i en array
+          .map(word => word[0].toUpperCase() + word.slice(1))//gjør om til stor forbokstav i hvert ord
+          .join(" ")// setter arrayen sammen igjen til en string med mellomrom mellom ordene
     }
 
     
 
-     useEffect(() => { //ChatGPT
+     useEffect(() => { //ChatGPT-samtale https://chatgpt.com/c/69b28803-304c-832b-bc10-2b8fcb72177d
          const findFilm = async () => {
              const title = slugTitle(slug)
              try{
-                const res = await fetch(`http://www.omdbapi.com/?s=${title}&apikey=${apiKey}`)
+                const res = await fetch(`http://www.omdbapi.com/?s=${title}&apikey=${apiKey}`) //ChatGPT-samtale https://chatgpt.com/share/69b28fdb-29d4-8011-89c7-8f5d13bcbcc7
                 const data = await res.json()
              
              if(data.Response === "False") {
@@ -37,22 +37,11 @@ export default function Movie(){
                 setError("Noe gikk galt")
              }
              
-            //  .then(res => res.json())
-            //  .then(data => {
-            //      if(data.Response === "False" ) {
-            //          setError("Finner ikke film")
-            //      }else{
-            //          setFilm(data)
-            //      }
-            //   })
-            //  .catch(err => console.error(err))
         }
 
     findFilm()
 
     }, [slug])
-
-
 
     console.log("Film:", film)
 
@@ -73,7 +62,7 @@ export default function Movie(){
                     poster={film?.Poster}
                 />
             ) : !error ? (
-                <p>Laster film...</p>
+                <p>Laster film...</p> // tekst som kommer hvis siden ikke klarer å finne filmen
             ) : null}
 
         </section>
