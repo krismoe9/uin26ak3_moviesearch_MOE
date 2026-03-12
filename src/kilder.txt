@@ -1,0 +1,18 @@
+
+Referanseliste 
+Jeg har også fått hjelp med oppgaven av studentassistentene
+
+CodesCracker. (2026, mars 12). CSS gap example image. https://codescracker.com/css/images/css-gap.JPG
+GeeksforGeeks. (2026, mars 10). How to restrict user character input limit in ReactJS. https://www.geeksforgeeks.org/reactjs/how-to-restrict-user-character-input-limit-in-reactjs/
+Medium. (2026, mars 12). Understanding Flexbox: A comprehensive guide. https://medium.com/@MakeComputerScienceGreatAgain/understanding-flexbox-a-comprehensive-guide-992bcd5f04de
+Mondal, R. (2026, mars 10). Using slug to make dynamic and user-friendly URLs for our website. https://rohitmondallblog.hashnode.dev/usingslug-to-make-dynamic-and-user-friendly-urls-for-our-website
+OpenAI ChatGPT. (2026, mars 9). Diskusjon om React-komponenter og input-limitering [ChatGPT-sesjon]. https://chatgpt.com/share/69af32e4-9090-8011-88be-283be5876cba
+OpenAI ChatGPT. (2026, mars 9). Samtale om React state og props [ChatGPT-sesjon]. https://chatgpt.com/c/69af289f-3bcc-8387-a767-244b82902f28
+OpenAI ChatGPT. (2026, mars 10). Samtale om CSS Grid og layout [ChatGPT-sesjon]. https://chatgpt.com/c/69afd1d7-f6cc-8325-b58b-7951de55c6cc
+OpenAI ChatGPT. (2026, mars 10). Diskusjon om React form validering [ChatGPT-sesjon]. https://chatgpt.com/share/69afe64c-0978-8011-93f0-4f944f254ec9
+OpenAI ChatGPT. (2026, mars 10). Samtale om dynamiske URL-er med slug [ChatGPT-sesjon]. https://chatgpt.com/share/69affb83-440c-8011-9771-10c751302e5e
+OpenAI ChatGPT. (2026, mars 12). Diskusjon om React routing og komponentstruktur [ChatGPT-sesjon]. https://chatgpt.com/share/69b286a8-b940-8011-b2c5-ea5249fd7a86
+OpenAI ChatGPT. (2026, mars 12). Samtale om bruk av slug i webadresser [ChatGPT-sesjon]. https://chatgpt.com/share/69b286d3-e944-8011-b517-dae01e0c4a60
+OpenAI ChatGPT. (2026, mars 12). Diskusjon om CSS Grid gap og styling [ChatGPT-sesjon]. https://chatgpt.com/share/69b286e7-8424-8011-ab42-295a1bca7eff
+OpenAI ChatGPT. (2026, mars 12). Samtale om CSS Flexbox og layout [ChatGPT-sesjon]. https://chatgpt.com/share/69b286fb-ee90-8011-a944-5d545ea6d50d
+OpenAI ChatGPT. (2026, mars 12). Diskusjon om React komponentdeling [ChatGPT-sesjon]. https://chatgpt.com/c/69b28803-304c-832b-bc10-2b8fcb72177d
