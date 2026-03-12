@@ -20,9 +20,11 @@ export default function Home(){
 
     const [history, setHistory] = useState(parsedHistory)
     const [focused, setFocused] = useState(false)
+    
     const [search, setSearch] = useState("james+bond")
     const [data, setData] = useState()
     const [error, setError] = useState()
+
 
 
 
@@ -75,8 +77,8 @@ export default function Home(){
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        setSearch(e)
-        e.target.reset() 
+        //setSearch(e)
+        //e.target.reset() 
         
         setHistory(prev => Array.isArray(prev) ? [...prev, search] : [search]) //ChatGPT 
     }
