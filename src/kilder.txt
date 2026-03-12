@@ -1,6 +1,6 @@
 
 Referanseliste 
-Jeg har også fått hjelp med oppgaven av studentassistentene + sett på kode fra undervisning.
+Jeg har også fått hjelp med oppgaven av studentassistentene + sett på kode fra tidigere undervisning og startkoden vi fikk i undervisningen.
 
 Referanseliste (APA 7th)
 
@@ -14,6 +14,7 @@ OpenAI ChatGPT. (2026, mars 9). Samtale om React state og props [ChatGPT-sesjon]
 OpenAI ChatGPT. (2026, mars 10). Samtale om CSS Grid og layout [ChatGPT-sesjon]. https://chatgpt.com/c/69afd1d7-f6cc-8325-b58b-7951de55c6cc
 OpenAI ChatGPT. (2026, mars 10). Feilmelding forklaring i JavaScript [ChatGPT-sesjon]. https://chatgpt.com/c/69afd117-abd8-8325-a7e9-ee1814c0215f
 OpenAI ChatGPT. (2026, mars 10). Diskusjon om React form validering [ChatGPT-sesjon]. https://chatgpt.com/share/69afe64c-0978-8011-93f0-4f944f254ec9
+OpenAI ChatGPT. (2026, mars 10). History map error fix [ChatGPT-sesjon]. https://chatgpt.com/c/69afecc5-2d28-8325-9ffd-fcf356278103
 OpenAI ChatGPT. (2026, mars 10). Samtale om dynamiske URL-er med slug [ChatGPT-sesjon]. https://chatgpt.com/share/69affb83-440c-8011-9771-10c751302e5e
 OpenAI ChatGPT. (2026, mars 12). Diskusjon om React routing og komponentstruktur [ChatGPT-sesjon]. https://chatgpt.com/share/69b286a8-b940-8011-b2c5-ea5249fd7a86
 OpenAI ChatGPT. (2026, mars 12). Samtale om bruk av slug i webadresser [ChatGPT-sesjon]. https://chatgpt.com/share/69b286d3-e944-8011-b517-dae01e0c4a60

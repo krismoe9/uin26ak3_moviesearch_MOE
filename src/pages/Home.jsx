@@ -7,9 +7,9 @@ import Movie from "./Movie"
 
 export default function Home(){
     
-    const storedHistory = localStorage.getItem("search") //kommentert ut av studentassisten
+    const storedHistory = localStorage.getItem("search") //kode fra undervisning
     
-    let parsedHistory = [] //ChatGPT
+    let parsedHistory = [] //ChatGPT-samtale https://chatgpt.com/c/69afecc5-2d28-8325-9ffd-fcf356278103
     try {
         parsedHistory = storedHistory ? JSON.parse(storedHistory) : []
         if (!Array.isArray(parsedHistory)) parsedHistory = []

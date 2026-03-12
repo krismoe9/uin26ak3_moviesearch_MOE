@@ -10,8 +10,8 @@ export default function MovieCard({title, year, poster}){
     
     const slug = title
         ?.toLowerCase() //gjør om til små bokstaver i hele teksen
-        ?.replace(/\s+/g, '-') //
-        ?.replace(/[^\w-]+/g, '')
+        ?.replace(/\s+/g, '-') //erstatter mellomrom med bindestrek
+        ?.replace(/[^\w-]+/g, '') // fjerner speisaltegn
 
         console.log(title)
 
