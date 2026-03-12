@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom"
 
 export default function MovieCard({title, year, poster}){
-    
-    const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
+
+
+    const slug = title
+        ?.toLowerCase()
+        ?.replace(/\s+/g, '-')
+        ?.replace(/[^\w-]+/g, '')
+
+
+        console.log("Slug", title)
 
     return( 
         <Link to={`/movie/${slug}`}>
