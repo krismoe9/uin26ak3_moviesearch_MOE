@@ -4,12 +4,22 @@ import { Link, useParams } from "react-router-dom"
 import MovieCard from "../components/MovieCard"
 import Movie from "./Movie"
 
+
 export default function Home(){
     
     const storedHistory = localStorage.getItem("search") //kommentert ut av studentassisten
-    const [focused, setFocused] = useState(false)
+    //const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : [])  //gammel kode
     
-    const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : [])  //kommentert ut av studentassisten
+    let parsedHistory = [] //ChatGPT
+    try {
+        parsedHistory = storedHistory ? JSON.parse(storedHistory) : []
+        if (!Array.isArray(parsedHistory)) parsedHistory = []
+    } catch (e) {
+        parsedHistory = []
+    }
+
+    const [history, setHistory] = useState(parsedHistory)
+    const [focused, setFocused] = useState(false)
     const [search, setSearch] = useState("james+bond")
     const [data, setData] = useState()
     const [error, setError] = useState()
@@ -26,8 +36,20 @@ export default function Home(){
     
 
     useEffect(()=>{ // Flyttet getMovies inn i useEffect, useEffect refresher siden (refresher ved hvert søk pga [search]) (Fikk hjelp av studentassistentene med dette)
-        
-        localStorage.setItem("search", JSON.stringify(history)) //kommentert ut av studentassistent
+        //varsel når man skriver under 3 bokstaver i søkefeltet
+        if (search.length < 3) {
+            setError("Du må skrive minst 3 bokstaver")
+            
+            return
+        } else {
+            setError("")
+        }
+
+        if(Array.isArray(history)) {
+            localStorage.setItem("search", JSON.stringify(history)) //kommentert ut av studentassistent
+        }
+
+
 
         const getMovies = async()=>{
             try
@@ -35,35 +57,30 @@ export default function Home(){
                 const response = await fetch(`${baseUrl}`)
                 const data = await response.json()
                 setData(data.Search)
-    
-    
             }
             catch(err){
                 console.error(err);
-            }
+            }   
         }
-        getMovies();
-    }, [history, search])
+        getMovies()
 
-    
+     }, [search,history]) //ChatGPT
+
+        
 
     const handleChange = (e)=>{
         setSearch(e.target.value)
         
-        //varsel når man skriver under 3 bokstaver i søkefeltet
-        if (e.target.value.length < 3) { 
-            setError("Du må skrive minst 3 bokstaver") //varsel-tekst
-        } else {
-            setError("")
-        }
     }
 
     const handleSubmit = (e)=>{
         e.preventDefault()
         setSearch(e)
-        e.target.reset()        
+        e.target.reset() 
+        
+        setHistory(prev => Array.isArray(prev) ? [...prev, search] : [search]) //ChatGPT 
     }
-    console.log(data)
+  
 
     return (
         <main>
@@ -77,7 +94,7 @@ export default function Home(){
                             <span>{error}</span>
                     )}
                 </label>
-                { focused ? <History history={history} setSearch={setSearch} /> : null }  {/* kommentert ut av studentassisten */}
+                { focused ? <History history={history} setSearch={setSearch} /> : null }
                 <button>Søk</button>
             </form>
             </article>

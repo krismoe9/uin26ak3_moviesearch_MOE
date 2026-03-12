@@ -8,8 +8,7 @@ export default function MovieCard({title, year, poster}){
         ?.replace(/\s+/g, '-')
         ?.replace(/[^\w-]+/g, '')
 
-
-        console.log("Slug", title)
+        console.log(title)
 
     return( 
         <Link to={`/movie/${slug}`}>
