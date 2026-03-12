@@ -214,3 +214,10 @@ main{
   text-transform: uppercase;
   text-decoration: none;
 }
+
+.ResultSection p{
+  color: #F2E6EE;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
