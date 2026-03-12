@@ -11,7 +11,7 @@ export default function MovieCard({title, year, poster}){
         console.log(title)
 
     return( 
-        <Link to={`/movie/${slug}`}>
+        <Link to={`/movie/${slug}`} className="MovieCardLink">
             <article className="MovieCard">  
                 <h3>{title}</h3>
                 <p>{year}</p> 

@@ -86,11 +86,11 @@ export default function Home(){
 
     return (
         <main>
-            <article>
+            <article className="SearchSection">
             <h1>Forside</h1>
+            <p>Søk etter film</p>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Søk etter film
                     <input type="search" placeholder="Indiana Jones" onChange={handleChange} onFocus={()=> setFocused(true)}></input>
                     {error && (
                             <span>{error}</span>

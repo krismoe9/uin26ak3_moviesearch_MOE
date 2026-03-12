@@ -1,18 +1,239 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+body{
+  display: grid;
+  grid-template-columns: auto 1300px auto;
+  
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* line-height: 1.5;
+  font-weight: 400; */
+
+  /* background-color: #f6effe; */
+  background-color: #240b70;
+  
 }
 
+div{
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+
+}
+
+main{
+  justify-items: center;
+  width: 100%;
+}
+
+.SearchSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+
+}
+
+  
+.SearchSection h1{
+  width: 100%;
+  color: #F2E6EE;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+} 
+
+.SearchSection p{
+  width: 100%;
+  max-width: 500px;
+  color: #F2E6EE;
+  font-size: 1.4rem;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.SearchSection form{
+  max-width: 1200px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.SearchSection input{
+  max-width: 300px;
+  height: 30px;
+
+  background-color: #fffdfe;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+
+}
+
+.SearchSection button{
+  width: 80px; 
+  height: 30px;
+  text-transform: uppercase;
+  text-decoration: solid;
+  background-color: #cadf9f;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+
+}
+
+.SearchSection select{
+  width: 80px; 
+  height: 30px;
+  text-transform: uppercase;
+  text-decoration: solid;
+  background-color: #fffdfe;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.SearchSection label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.SearchSection span{
+  display:inline-block;
+  height: 30px;
+  text-decoration: solid;
+  background-color: #fffdfe;
+  border-radius: 5px;
+  padding: 0px 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.PosterSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start; 
+  row-gap: 25px;
+  column-gap: 25px;
+}
+
+.MovieCard{
+  width: 200px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+
+  background-color: #F2E6EE;
+  padding: 10px 20px;
+
+  overflow: hidden;          /* skjuler alt utenfor containeren */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.MovieCard img{
+  width: 100%;
+  max-width: 200px;
+  margin: 5px 0px;
+
+  width: 100%;               /* fyll hele bredden */
+  aspect-ratio: 2 / 3;      /* ønsket størrelsesforhold */
+  object-fit: cover;         /* fyller container, cropp hvis nødvendig */
+  display: block;  
+  
+  border-radius: 7px;
+}
+
+.MovieCard h3{
+  height: 60px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0px;
+  color: black;
+
+}
+
+.MovieCardLink{
+  text-decoration: none;
+  border-bottom: none;
+  color: inherit;
+  
+}
+
+.MovieCard p{
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 5px 0px;
+  color: black;
+}
+
+.ResultSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.ResultSection a{
+  margin-top: 25px ;
+  color: #F2E6EE;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.ResultSection h2{
+  color: #F2E6EE;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* a{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+
+
+
+/*
 a {
   font-weight: 500;
   color: #646cff;
@@ -65,4 +286,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

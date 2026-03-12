@@ -59,8 +59,8 @@ export default function Movie(){
 
 
     return (
-        <section>
-            <Link to={'/'}>Hjem</Link>
+        <section className="ResultSection">
+            <Link to={'/'}>Tilbake</Link>
             <h2>{ slugTitle(slug) }</h2> {/* ChatGPT*/}
 
             {error && <p>{error}</p>}
