@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' index element={<Home />} />
-      <Route path='/:slug' element={<Movie />} />
+      <Route path='/movie/:slug' element={<Movie />} /> {/*endret tilbake til /movie/:slug'*/}
     </Routes>
   )
 }
